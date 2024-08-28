@@ -100,7 +100,7 @@ modalCloses.forEach((modalClose) => {
 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
-const iconTheme = 'uil-moon'
+const iconTheme = 'uil-sun'
 
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
