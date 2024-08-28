@@ -99,8 +99,8 @@ modalCloses.forEach((modalClose) => {
 //======================Theme_Change=============
 
 const themeButton = document.getElementById('theme-button')
-const darkTheme = 'light-theme'
-const iconTheme = 'uil-moon'
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
 
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
@@ -111,8 +111,16 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-mo
 if (selectedTheme) {
    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
    themeButton.classList[selectedTheme === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}else {
+   // Default to dark theme if no preference is set
+   document.body.classList.add(darkTheme);
+   themeButton.classList.add(iconTheme);
+   // Store the default theme and icon
+   localStorage.setItem('selected-theme', 'dark');
+   localStorage.setItem('selected-icon', iconTheme);
 }
 
+  
 themeButton.addEventListener('click', () => {
    document.body.classList.toggle(darkTheme)
    themeButton.classList.toggle(iconTheme)
