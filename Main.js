@@ -99,7 +99,7 @@ modalCloses.forEach((modalClose) => {
 //======================Theme_Change=============
 
 const themeButton = document.getElementById('theme-button')
-const darkTheme = 'light-theme'
+const darkTheme = 'dark-theme'
 const iconTheme = 'uil-moon'
 
 const selectedTheme = localStorage.getItem('selected-theme')
